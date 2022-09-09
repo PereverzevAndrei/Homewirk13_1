@@ -8,6 +8,6 @@ public class Main {
         System.out.println(sM.min);
         sM.max(sls.length);
         System.out.println(sM.max);
-        sM.averageSale(sls);
+        sM.averageSale();
     }
 }

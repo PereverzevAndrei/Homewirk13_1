@@ -1,8 +1,9 @@
 public class SalesManager {
     protected long[] sales;
-    public long max;
-    public long min;
-    public long salesSumm;
+    protected long max;
+    protected long min;
+    protected long salesSumm;
+    protected long averageSale;
 
     public SalesManager(long[] sales) {
         this.sales = sales;
@@ -29,14 +30,16 @@ public class SalesManager {
         return min;
     }
 
-    public long averageSale(long[] sales) {
+    public long averageSale() {
         long salesSumm = 0;
+        long averageSale;
         max(sales.length);
         min();
         for (long sale : sales) {
             salesSumm += sale;
         }
-        System.out.println("Average Sale: " + (salesSumm - min - max) / (sales.length - 2));
-        return salesSumm;
+        averageSale = (salesSumm - min - max) / (sales.length - 2);
+        System.out.println("—редн€€ продажа: " + averageSale);
+        return averageSale;
     }
 }
